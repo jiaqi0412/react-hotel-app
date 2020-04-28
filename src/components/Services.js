@@ -1,28 +1,28 @@
 import React, { Component } from 'react'
 import Title from "./Title"
-import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa'
+import { FaThumbsUp, FaInfinity, FaPhoneSquareAlt, FaShieldAlt } from 'react-icons/fa'
 export default class Services extends Component {
     state = {
         services: [
             {
-                icon: <FaCocktail />,
-                title: "free cocltails",
-                info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis culpa asperiores qui repellendus! Distinctio repudiandae aspernatur dicta fuga enim reprehenderit corporis maiores inventore commodi, soluta voluptatem a beatae, autem ullam?"
+                icon: <FaThumbsUp />,
+                title: "free cancellation",
+                info: "Cancel for free up to 24 hours before your trip starts. Because life happens and it helps to be flexible when it does."
             },
             {
-                icon: <FaHiking />,
-                title: "hiking",
-                info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis culpa asperiores qui repellendus! Distinctio repudiandae aspernatur dicta fuga enim reprehenderit corporis maiores inventore commodi, soluta voluptatem a beatae, autem ullam?"
+                icon: <FaInfinity />,
+                title: "Endless options",
+                info: "Choose from hundreds of models you won’t find anywhere else. Pick it up or get it delivered where you want it."
             },
             {
-                icon: <FaShuttleVan />,
-                title: "free shuttle",
-                info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis culpa asperiores qui repellendus! Distinctio repudiandae aspernatur dicta fuga enim reprehenderit corporis maiores inventore commodi, soluta voluptatem a beatae, autem ullam?"
+                icon: <FaPhoneSquareAlt />,
+                title: "We’ve got your back",
+                info: "Rest easy knowing that the community is pre-screened, and customer support and roadside assistance are just a click away."
             },
             {
-                icon: <FaBeer />,
-                title: "free beer",
-                info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis culpa asperiores qui repellendus! Distinctio repudiandae aspernatur dicta fuga enim reprehenderit corporis maiores inventore commodi, soluta voluptatem a beatae, autem ullam?"
+                icon: <FaShieldAlt />,
+                title: "Insurance options included",
+                info: "Drive confidently with your choice of protection plans — you’re covered with up to $2M in liablity insurance provided by Intact Financial Corporation."
             }
         ]
     }

@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 
 import Client from "./Contentful";
 
-
-
-
 const RoomContext = React.createContext();
 
 
@@ -19,37 +16,30 @@ export default class RoomProvider extends Component {
         price: 0,
         minPrice: 0,
         maxPrice: 0,
-        minSize: 0,
-        maxSize: 0,
+
         breakfast: false,
-        pets: false,
+
     }
 
     //getData
     getData = async () => {
         try {
             let response = await Client.getEntries({
-                content_type: "resort",
+                content_type: "cars",
                 order: "sys.createdAt",
                 //order: "fields.price"
             });
             let rooms = this.formatData(response.items)
             let featuredRooms = rooms.filter(room => room.featured === true)
-
-            let maxPrice = Math.max(...rooms.map(item => item.price))
-            let maxSize = Math.max(...rooms.map(item => item.size))
-
+            let maxPrice = Math.max(...rooms.map(item => item.price));
             this.setState({
                 rooms,
                 featuredRooms,
                 sortedRooms: rooms,
                 loading: false,
                 price: maxPrice,
-                maxPrice,
-                maxSize
+                maxPrice
             })
-
-
 
         } catch (error) {
             console.log(error)
@@ -66,7 +56,7 @@ export default class RoomProvider extends Component {
             let images = item.fields.images.map(image => image.fields.file.url)
             let room = { ...item.fields, images, id };
             return room
-            
+
         })
         return tempItems
     }
@@ -98,10 +88,9 @@ export default class RoomProvider extends Component {
             price,
             minPrice,
             maxPrice,
-            minSize,
-            maxSize,
+
             breakfast,
-            pets
+
         } = this.state
 
         //all the rooms
@@ -124,18 +113,18 @@ export default class RoomProvider extends Component {
         //filter by price
         tempRooms = tempRooms.filter(room => room.price <= price)
 
-        //filter by size
-        tempRooms = tempRooms.filter(room => room.size >= minSize && room.size <= maxSize)
+        // //filter by size
+        // tempRooms = tempRooms.filter(room => room.size >= minSize && room.size <= maxSize)
 
         //filter by breakfast
         if (breakfast) {
             tempRooms = tempRooms.filter(room => room.breakfast === true)
         }
 
-        //filter by pets
-        if (pets) {
-            tempRooms = tempRooms.filter(room => room.pets === true)
-        }
+        // //filter by pets
+        // if (pets) {
+        //     tempRooms = tempRooms.filter(room => room.pets === true)
+        // }
 
         // change state
         this.setState({

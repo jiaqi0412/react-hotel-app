@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-
-import logo from "../images/logo.svg"
+import logo from "../images/car-logo.png"
 import { FaAlignRight } from 'react-icons/fa'
-
 import { Link } from 'react-router-dom'
 
+
+import HoomeIcon from '@material-ui/icons/Home';
+import { Button } from 'react-bootstrap';
+
+
 export default class Navbar extends Component {
+
+
     state = {
         isOpen: false
     }
@@ -14,24 +19,32 @@ export default class Navbar extends Component {
     }
 
     render() {
+
         return (
+
             <nav className="navbar">
                 <div className="nav-center">
                     <div className="nav-header">
                         <Link to="/">
-                            <img src={logo} alt="resort" />
+                            <img src={logo} alt="resort" className="car-logo" />
                         </Link>
-                        <button type="button" className=" nav-btn" onClick={this.handleToggle}>
+                        <button type="button" className="nav-btn " onClick={this.handleToggle}>
                             <FaAlignRight className="nav-icon" />
                         </button>
 
                     </div>
                     <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/">
+                                
+                                    Home
+                                
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/rooms">Rooms</Link>
+                            <Link to="/rooms" >
+                                Cars
+                            </Link>
                         </li>
                     </ul>
                 </div>

@@ -19,7 +19,7 @@
 
 /* globals */
 body {
-  padding-top: 66px;
+  /* padding-top: 66px; */
   color: var(--mainBlack);
   background: var(--mainWhite);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -101,6 +101,14 @@ h6 {
 
 /* end of globals */
 /* Navbar */
+.nav-center {
+  justify-content: center;
+}
+
+.car-logo {
+  width: 20%;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -109,11 +117,17 @@ h6 {
   padding: 0.75rem 2rem;
   background: var(--offWhite);
   z-index: 1;
+  min-height: 80px;
 }
 
 .nav-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-header a {
+  width: 80%;
 }
 
 .nav-btn {
@@ -152,16 +166,25 @@ h6 {
 }
 
 .show-nav {
-  height: 100px;
+  height: 200px;
 }
 
 @media screen and (min-width: 768px) {
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+  .navbar {
+    max-height: 150px;
+  }
+
   .nav-btn {
     display: none;
   }
 
   .nav-center {
-    max-width: 1170px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
   }
@@ -169,7 +192,8 @@ h6 {
   .nav-links {
     height: auto;
     display: flex;
-    margin-left: 4rem;
+    overflow: visible;
+
   }
 
   .nav-links a {
@@ -183,14 +207,15 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/porsche911/porsche-zoom2-_1_.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/porsche911/porsche-zoom2-_2_.jpg");
   min-height: 60vh;
 }
 
@@ -204,6 +229,7 @@ h6 {
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
+  margin-bottom: 20px;
 }
 
 .banner h1 {
