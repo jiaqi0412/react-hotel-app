@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import defaultBcg from '../images/room-1.jpeg'
-
+import Button from 'react-bootstrap/Button';
 import Banner from '../components/Banner'
 import { Link } from 'react-router-dom'
 import { RoomContext } from '../context'
@@ -29,9 +29,9 @@ export default class SingleRoom extends Component {
         if (!room) {
             return <div className="error">
                 <h3>no such car could be found...</h3>
-                <Link to='/rooms' className="btn-primary">
-                    back to cars
-                </Link>
+                <Button variant="outline-light">
+                    <Link to="/cars" id="buttonStyle">back to cars</Link>
+                </Button>
             </div>
         }
 
@@ -43,9 +43,9 @@ export default class SingleRoom extends Component {
             <>
                 <StyledHero img={mainImg}>
                     <Banner title={`${name}`}>
-                        <Link to='/rooms' className='btn-primary'>
-                            back to cars
-                    </Link>
+                        <Button variant="outline-light">
+                            <Link to="/cars" id="buttonStyle">back to cars</Link>
+                        </Button>
                     </Banner>
                 </StyledHero>
                 <section className="single-room">
@@ -62,14 +62,14 @@ export default class SingleRoom extends Component {
                         <article className="info">
                             <h3>info</h3>
                             <h6>price : ${price}</h6>
-                            
+
                             <h6>
-                                max capacity : 
+                                max capacity :
                                 {
                                     capacity > 1 ? ` ${capacity} people` : ` ${capacity} person`
                                 }
                             </h6>
-                            
+
                             <h6>{breakfast && "all wheel drive available"}</h6>
                         </article>
                     </div>

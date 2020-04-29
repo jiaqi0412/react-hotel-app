@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Switch } from 'react-router-dom'
 
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/rooms" component={Rooms} />
-        <Route exact path="/rooms/:slug" component={SingleRoom} />
+        <Route exact path="/cars" component={Rooms} />
+        <Route exact path="/cars/:slug" component={SingleRoom} />
         <Route component={Error}></Route>
       </Switch>
-
+      <Footer></Footer>
 
     </>
   );

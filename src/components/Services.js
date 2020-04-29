@@ -29,7 +29,12 @@ export default class Services extends Component {
     render() {
         return (
             <section className="services">
-                <Title title="Services"></Title>
+                <Title title="Services" ></Title>
+
+                <div className="section-title">
+                    <h4 id="services-title">Services</h4>
+                    <div></div>
+                </div>
                 <div className="services-center">
                     {this.state.services.map((item, index) => {
                         return (
