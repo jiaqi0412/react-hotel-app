@@ -4,20 +4,20 @@ import Banner from "../components/Banner"
 import { Link } from 'react-router-dom'
 import Services from "../components/Services"
 import FeaturedRooms from "../components/FeaturedRooms"
-import Carousels from '../components/Carousel'
+import Carousels from '../components/Carousels'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 export default function Home() {
     return (
         <>
-            <Hero>
+            {/* <Hero>
                 <Banner title="Luxurious Car Rental" subtitle="staring at $199 per day">
                     <Button variant="outline-light">
                         <Link to="/cars" id="buttonStyle">our cars</Link>
                     </Button>
                 </Banner>
-            </Hero>
-
+            </Hero> */}
+            <Carousels></Carousels>
             <Services></Services>
             <FeaturedRooms></FeaturedRooms>
 
