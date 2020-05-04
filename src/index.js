@@ -6,8 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { RoomProvider } from './context'
 import 'font-awesome/css/font-awesome.min.css';
-import theme from "./theme"
-import { ThemeProvider } from '@material-ui/core/styles'
+
 
 ReactDOM.render(
   <RoomProvider>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Title from "./Title"
+
 import { FaThumbsUp, FaInfinity, FaPhoneSquareAlt, FaShieldAlt } from 'react-icons/fa'
+import ServicesTitle from '../components/ServicesTitle'
 export default class Services extends Component {
     state = {
         services: [
@@ -29,12 +30,8 @@ export default class Services extends Component {
     render() {
         return (
             <section className="services">
-                <Title title="Services" ></Title>
+                <ServicesTitle title="Services" ></ServicesTitle>
 
-                <div className="section-title">
-                    <h4 id="services-title">Services</h4>
-                    <div></div>
-                </div>
                 <div className="services-center">
                     {this.state.services.map((item, index) => {
                         return (
