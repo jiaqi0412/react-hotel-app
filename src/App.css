@@ -43,11 +43,11 @@ h3 {
   margin-bottom: 1em;
 }
 
-h4 {
+/* h4 {
   font-size: 1.2em;
   line-height: 1.25;
   margin-bottom: 1.25em;
-}
+} */
 
 h5 {
   font-size: 1em;
@@ -146,8 +146,9 @@ h2 {
 
 /* NAVIGATION */
 nav {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  padding-bottom: 10px;
   
 }
 nav ul {
@@ -434,12 +435,9 @@ nav.shift ul li a:hover:after {
 
 /* end of navbar */
 /* Hero */
-
-
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -463,7 +461,7 @@ nav.shift ul li a:hover:after {
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .banner h1 {
@@ -509,7 +507,7 @@ nav.shift ul li a:hover:after {
   } */
 
   .carousel {
-
+    min-height: 70vh;
     width: 100%;
     height: auto;
     margin: auto;
@@ -536,11 +534,12 @@ nav.shift ul li a:hover:after {
 }
 
 .section-title h4 {
-  font-size: 2rem;
+  font-size: 1rem;
   letter-spacing: var(--mainSpacing);
   text-transform: capitalize;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
+
 
 .section-title div {
   width: 5rem;
@@ -595,6 +594,12 @@ nav.shift ul li a:hover:after {
 }
 
 @media screen and (min-width: 992px) {
+  .section-title h4 {
+    font-size: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    /* margin-bottom: 1rem; */
+  }
   .services-center {
     width: 95vw;
     max-width: 1170px;
